@@ -29,6 +29,7 @@ glyphicon glyphicon-user" id="sizing-addon1"></span>
 			<div class="remember_login">
 				<input id="touchweb_form-checkbox" type="checkbox" checked="">
 				<label style="margin-bottom: 0.05rem;font-size: 0.12rem;" for="touchweb_form-checkbox">两周内记住登录</label>
+				
 				<a href="javascript: void(0);" class="forgot_password">忘记密码？</a>
 			</div>
 			<div class="login_btn">
@@ -95,6 +96,7 @@ glyphicon glyphicon-user" id="sizing-addon1"></span>
 </script>
 
 <style lang="scss" scoped>
+
 	/*登陆注册框*/
 	.input-group-addon{
 		background-color: #FFF;border: 0 none;top:0;

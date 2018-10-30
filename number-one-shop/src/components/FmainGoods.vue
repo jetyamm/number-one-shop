@@ -2,7 +2,7 @@
 	<div class="know-you-like container">
 		<h4>懂你想要</h4>
 		<div class="item-box">
-			<a class="item-link" href="../#/goodDetail" v-for="gl in goodList" @click="deliveryGood(gl)">
+			<a class="item-link" href="../#/goodDetail" v-for="(gl,i) in goodList" @click="deliveryGood(gl)" :key="i">
 				<div class="pic-wrap"><img class="pic" :src="gl.imageUrl"></div>
 				<div class="item-title" style="color: #000000;" v-text="gl.name"></div>
 				<div class="item-bottom"><span style="color: red;">¥<span class="item-price" v-text="gl.price"></span></span>
@@ -32,7 +32,7 @@
 			var self = this;
 			Axios.get('http://10.3.135.40:3002/getIndexGood', {
 					params: {
-						siteType: this.page
+						siteType: self.page
 					}
 				})
 				.then(function(response) {
@@ -88,7 +88,7 @@
 	.know-you-like {
 		margin-bottom: 1rem;
 	}
-	
+
 	h4 {
 		font-weight: 999;
 		/*font-size: 0.14rem;*/
